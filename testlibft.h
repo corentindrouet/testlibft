@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   testlibft.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cdrouet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/30 13:18:20 by cdrouet           #+#    #+#             */
-/*   Updated: 2015/11/30 16:15:46 by cdrouet          ###   ########.fr       */
+/*   Created: 2015/11/30 13:42:15 by cdrouet           #+#    #+#             */
+/*   Updated: 2015/11/30 16:23:38 by cdrouet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "testlibft.h"
+#ifndef TESTLIBFT_H
+# define TESTLIBFT_H
+# include <string.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include "libft.h"
 
-int	main(void)
-{
-	test_memset();
-	test_bzero();
-	return (0);
-}
+void	test_memset();
+void	test_bzero();
+
+#endif
