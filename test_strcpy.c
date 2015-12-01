@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   testlibft.h                                        :+:      :+:    :+:   */
+/*   test_strcpy.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cdrouet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/30 13:42:15 by cdrouet           #+#    #+#             */
-/*   Updated: 2015/12/01 09:08:51 by cdrouet          ###   ########.fr       */
+/*   Created: 2015/12/01 09:12:12 by cdrouet           #+#    #+#             */
+/*   Updated: 2015/12/01 09:15:09 by cdrouet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TESTLIBFT_H
-# define TESTLIBFT_H
-# include <string.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include "libft.h"
+#include "testlibft.h"
 
-void	test_memset();
-void	test_bzero();
-void	test_memcpy();
-void	test_memccpy();
-void	test_memmove();
-void	test_memchr();
-void	test_memcmp();
-void	test_strlen();
-void	test_strdup();
+static int	test_strcpy_1()
+{
+	
+}
 
-#endif
+void		test_strcpy()
+{
+	ft_putendl("TEST STRCPY :");
+	if (!test_strcpy_1())
+		ft_putendl("ok :)");
+	else
+		ft_putendl("not ok :(");
+	ft_putchar('\n');
+}

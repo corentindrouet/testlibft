@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   testlibft.h                                        :+:      :+:    :+:   */
+/*   test_strlen.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cdrouet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/30 13:42:15 by cdrouet           #+#    #+#             */
-/*   Updated: 2015/12/01 09:08:51 by cdrouet          ###   ########.fr       */
+/*   Created: 2015/12/01 08:54:43 by cdrouet           #+#    #+#             */
+/*   Updated: 2015/12/01 09:00:58 by cdrouet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TESTLIBFT_H
-# define TESTLIBFT_H
-# include <string.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include "libft.h"
+#include "testlibft.h"
 
-void	test_memset();
-void	test_bzero();
-void	test_memcpy();
-void	test_memccpy();
-void	test_memmove();
-void	test_memchr();
-void	test_memcmp();
-void	test_strlen();
-void	test_strdup();
+static int	test_strlen_1()
+{
+	char	ptr[50] = "qwertyuiopasdfghjklzxcvbnm";
 
-#endif
+	return (strlen(ptr) - ft_strlen(ptr));
+}
+
+void		test_strlen()
+{
+	ft_putendl("TEST STRLEN :");
+	if (!test_strlen_1())
+		ft_putendl("ok :)");
+	ft_putchar('\n');
+}
