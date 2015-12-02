@@ -1,37 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_strcpy.c                                      :+:      :+:    :+:   */
+/*   test_strncpy.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cdrouet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/01 09:12:12 by cdrouet           #+#    #+#             */
-/*   Updated: 2015/12/02 09:10:40 by cdrouet          ###   ########.fr       */
+/*   Created: 2015/12/02 09:13:35 by cdrouet           #+#    #+#             */
+/*   Updated: 2015/12/02 09:21:26 by cdrouet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "testlibft.h"
 
-static int	test_strcpy_1()
+static int	test_strncpy_1()
 {
 	char	result1[20] = "bonjour";
 	char	result2[20] = "bonjour";
 	char	cpy[20] = "essai";
 
-	strcpy(result1, cpy);
-	ft_putstr("strcpy : ");
+	strncpy(result1, cpy, 7);
+	ft_putstr("strncpy : ");
 	ft_putstr(result1);
 	ft_putstr(" |-|||-| ");
-	ft_strcpy(result2, cpy);
-	ft_putstr("ft_strcpy : ");
+	ft_strncpy(result2, cpy, 7);
+	ft_putstr("ft_strncpy : ");
 	ft_putendl(result2);
-	return (strcmp(result1, result2));
+	return (memcmp(result1, result2, 8));
 }
 
-void		test_strcpy()
+static int	test_strncpy_2()
 {
-	ft_putendl("TEST STRCPY :");
-	if (!test_strcpy_1())
+	char	result1[20] = "bonjour";
+	char	result2[20] = "bonjour";
+	char	cpy[20] = "essai";
+
+	strncpy(result1, cpy, 3);
+	ft_putstr("strncpy : ");
+	ft_putstr(result1);
+	ft_putstr(" |-|||-| ");
+	ft_strncpy(result2, cpy, 3);
+	ft_putstr("ft_strncpy : ");
+	ft_putendl(result2);
+	return (memcmp(result1, result2, 7));
+}
+
+void		test_strncpy()
+{
+	ft_putendl("TEST STRNCPY :");
+	if (!test_strncpy_1() && !test_strncpy_2())
 		ft_putendl("ok :)");
 	else
 		ft_putendl("not ok :(");

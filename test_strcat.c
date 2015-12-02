@@ -1,40 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_strdup.c                                      :+:      :+:    :+:   */
+/*   test_strcat.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cdrouet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/01 09:01:05 by cdrouet           #+#    #+#             */
-/*   Updated: 2015/12/02 09:01:53 by cdrouet          ###   ########.fr       */
+/*   Created: 2015/12/02 09:21:57 by cdrouet           #+#    #+#             */
+/*   Updated: 2015/12/02 09:28:24 by cdrouet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "testlibft.h"
 
-static int	test_strdup_1()
+static int	test_strcat_1()
 {
-	char	*result1;
-	char	*result2;
-	int		ret;
+	char	result1[30] = "bonjour";
+	char	result2[30] = "bonjour";
+	char	cat[10] = "essai";
 
-	result1 = strdup("bonjour");
-	result2 = ft_strdup("bonjour");
-	ft_putstr("strdup return : ");
+	strcat(result1, cat);
+	ft_putstr("strcat : ");
 	ft_putstr(result1);
 	ft_putstr(" |-|||-| ");
-	ft_putstr("ft_strdup return : ");
+	ft_strcat(result2, cat);
+	ft_putstr("ft_strcat : ");
 	ft_putendl(result2);
-	ret = memcmp(result1, result2, 8);
-	free(result1);
-	free(result2);
-	return (ret);
+	return (strcmp(result1, result2));
 }
 
-void		test_strdup()
+void		test_strcat()
 {
-	ft_putendl("TEST STRDUP :");
-	if (!test_strdup_1())
+	ft_putendl("TEST STRCAT");
+	if (!test_strcat_1())
 		ft_putendl("ok :)");
 	else
 		ft_putendl("not ok :(");

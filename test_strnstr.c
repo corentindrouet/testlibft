@@ -1,40 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_strdup.c                                      :+:      :+:    :+:   */
+/*   test_strnstr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cdrouet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/01 09:01:05 by cdrouet           #+#    #+#             */
-/*   Updated: 2015/12/02 09:01:53 by cdrouet          ###   ########.fr       */
+/*   Created: 2015/12/02 10:44:38 by cdrouet           #+#    #+#             */
+/*   Updated: 2015/12/02 10:56:30 by cdrouet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "testlibft.h"
 
-static int	test_strdup_1()
+static int	test_strnstr_1()
 {
+	char	essai[50] = "je suis etudiant a 42";
 	char	*result1;
 	char	*result2;
-	int		ret;
 
-	result1 = strdup("bonjour");
-	result2 = ft_strdup("bonjour");
-	ft_putstr("strdup return : ");
-	ft_putstr(result1);
-	ft_putstr(" |-|||-| ");
-	ft_putstr("ft_strdup return : ");
-	ft_putendl(result2);
-	ret = memcmp(result1, result2, 8);
-	free(result1);
-	free(result2);
-	return (ret);
+	result1 = strnstr(essai, "is et", 10);
+	result2 = ft_strnstr(essai, "is et", 10);
+	return (strcmp(result1, result2));
 }
 
-void		test_strdup()
+static int	test_strnstr_2()
 {
-	ft_putendl("TEST STRDUP :");
-	if (!test_strdup_1())
+	char	essai[50] = "je suis etudiant a 42";
+	char	*result1;
+	char	*result2;
+
+	result1 = strnstr(essai, "is et", 3);
+	result2 = ft_strnstr(essai, "is et", 3);
+	if (result2)
+		return (1);
+	return (0);
+}
+
+void		test_strnstr()
+{
+	ft_putendl("TEST STRNSTR :");
+	if (!test_strnstr_1() && !test_strnstr_2())
 		ft_putendl("ok :)");
 	else
 		ft_putendl("not ok :(");

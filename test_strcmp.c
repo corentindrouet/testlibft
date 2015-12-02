@@ -1,39 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   test_strcmp.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cdrouet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/30 13:18:20 by cdrouet           #+#    #+#             */
-/*   Updated: 2015/12/02 11:13:03 by cdrouet          ###   ########.fr       */
+/*   Created: 2015/12/02 10:57:01 by cdrouet           #+#    #+#             */
+/*   Updated: 2015/12/02 11:04:57 by cdrouet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "testlibft.h"
 
-int	main(void)
+static int	test_strcmp_1()
 {
-	test_memset();
-	test_bzero();
-	test_memcpy();
-	test_memccpy();
-	test_memmove();
-	test_memchr();
-	test_memcmp();
-	test_strlen();
-	test_strdup();
-	test_strcpy();
-	test_strncpy();
-	test_strcat();
-	test_strncat();
-	test_strlcat();
-	test_strchr();
-	test_strrchr();
-	test_strstr();
-	test_strnstr();
-	test_strcmp();
-	test_strncmp();
-	test_atoi();
-	return (0);
+	return (strcmp("abcd", "abcd") - ft_strcmp("abcd", "abcd"));
+}
+
+static int	test_strcmp_2()
+{
+	return (strcmp("abcd", "abcde") - ft_strcmp("abcd", "abcde"));
+}
+
+void		test_strcmp()
+{
+	ft_putendl("TEST STRCMP");
+	if (!test_strcmp_1() && !test_strcmp_2())
+		ft_putendl("ok :)");
+	else
+		ft_putendl("not ok :(");
+	ft_putchar('\n');
 }
