@@ -6,7 +6,7 @@
 /*   By: cdrouet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 10:44:38 by cdrouet           #+#    #+#             */
-/*   Updated: 2015/12/02 10:56:30 by cdrouet          ###   ########.fr       */
+/*   Updated: 2015/12/02 13:01:30 by cdrouet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,9 @@ static int	test_strnstr_2()
 
 void		test_strnstr()
 {
-	ft_putendl("TEST STRNSTR :");
+	ft_putstr("TEST STRNSTR : ");
 	if (!test_strnstr_1() && !test_strnstr_2())
 		ft_putendl("ok :)");
 	else
 		ft_putendl("not ok :(");
-	ft_putchar('\n');
 }

@@ -6,7 +6,7 @@
 /*   By: cdrouet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 09:39:08 by cdrouet           #+#    #+#             */
-/*   Updated: 2015/12/02 10:16:58 by cdrouet          ###   ########.fr       */
+/*   Updated: 2015/12/02 13:03:47 by cdrouet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,6 @@ static int	test_strlcat_1()
 
 	ret1 = strlcat(result1, lcat, 9);
 	ret2 = ft_strlcat(result2, lcat, 9);
-	ft_putstr("strlcat : ");
-	ft_putstr(result1);
-	ft_putstr(" | return : ");
-	ft_putnbr(ret1);
-	ft_putstr(" |-|||-| ");
-	ft_putstr("ft_strlcat : ");
-	ft_putstr(result2);
-	ft_putstr(" | return : ");
-	ft_putnbr(ret2);
-	ft_putchar('\n');
 	if (ret1 == ret2)
 		return (strcmp(result1, result2));
 	return (1);
@@ -47,16 +37,6 @@ static int	test_strlcat_2()
 
 	ret1 = strlcat(result1, lcat, 6);
 	ret2 = ft_strlcat(result2, lcat, 6);
-	ft_putstr("strlcat : ");
-	ft_putstr(result1);
-	ft_putstr(" | return : ");
-	ft_putnbr(ret1);
-	ft_putstr(" |-|||-| ");
-	ft_putstr("ft_strlcat : ");
-	ft_putstr(result2);
-	ft_putstr(" | return : ");
-	ft_putnbr(ret2);
-	ft_putchar('\n');
 	if (ret1 == ret2)
 		return (strcmp(result1, result2));
 	return (1);
@@ -72,16 +52,6 @@ static int	test_strlcat_3()
 
 	ret1 = strlcat(result1, lcat, 3);
 	ret2 = ft_strlcat(result2, lcat, 3);
-	ft_putstr("strlcat : ");
-	ft_putstr(result1);
-	ft_putstr(" | return : ");
-	ft_putnbr(ret1);
-	ft_putstr(" |-|||-| ");
-	ft_putstr("ft_strlcat : ");
-	ft_putstr(result2);
-	ft_putstr(" | return : ");
-	ft_putnbr(ret2);
-	ft_putchar('\n');
 	if (ret1 == ret2)
 		return (strcmp(result1, result2));
 	return (1);
@@ -89,10 +59,9 @@ static int	test_strlcat_3()
 
 void		test_strlcat()
 {
-	ft_putendl("TEST STRLCAT :");
+	ft_putstr("TEST STRLCAT : ");
 	if (!test_strlcat_1() && !test_strlcat_2() && !test_strlcat_3())
 		ft_putendl("ok :)");
 	else
 		ft_putendl("not ok :(");
-	ft_putchar('\n');
 }

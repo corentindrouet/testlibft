@@ -6,7 +6,7 @@
 /*   By: cdrouet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 11:39:11 by cdrouet           #+#    #+#             */
-/*   Updated: 2015/12/02 11:44:01 by cdrouet          ###   ########.fr       */
+/*   Updated: 2015/12/02 13:00:35 by cdrouet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,9 @@ static int	test_isalpha_2()
 
 void		test_isalpha()
 {
-	ft_putendl("TEST ISALPHA :");
+	ft_putstr("TEST ISALPHA : ");
 	if (!test_isalpha_1() && !test_isalpha_2())
 		ft_putendl("ok :)");
 	else
 		ft_putendl("not ok :(");
-	ft_putchar('\n');
 }

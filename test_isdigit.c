@@ -6,7 +6,7 @@
 /*   By: cdrouet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 11:39:11 by cdrouet           #+#    #+#             */
-/*   Updated: 2015/12/02 11:47:29 by cdrouet          ###   ########.fr       */
+/*   Updated: 2015/12/02 13:00:20 by cdrouet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,9 @@ static int	test_isdigit_2()
 
 void		test_isdigit()
 {
-	ft_putendl("TEST ISDIGIT :");
+	ft_putstr("TEST ISDIGIT : ");
 	if (!test_isdigit_1() && !test_isdigit_2())
 		ft_putendl("ok :)");
 	else
 		ft_putendl("not ok :(");
-	ft_putchar('\n');
 }

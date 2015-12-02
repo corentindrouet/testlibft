@@ -6,7 +6,7 @@
 /*   By: cdrouet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 07:39:32 by cdrouet           #+#    #+#             */
-/*   Updated: 2015/12/01 08:21:56 by cdrouet          ###   ########.fr       */
+/*   Updated: 2015/12/02 13:14:35 by cdrouet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,7 @@ static int	test_memcpy_1()
 	char	*result2;
 
 	result1 = memcpy(norm, src, 5);
-	ft_putstr("retour : ");
-	ft_putstr(result1);
 	result2 = ft_memcpy(ft, src, 5);
-	ft_putstr(" |-|||-| ");
-	ft_putstr("retour : ");
-	ft_putendl(result2);
 	return (memcmp(result1, result2, 7));
 }
 
@@ -39,12 +34,7 @@ static int	test_memcpy_2()
 	char	*result2;
 
 	result1 = memcpy(norm, src, 10);
-	ft_putstr("retour : ");
-	ft_putstr(result1);
 	result2 = ft_memcpy(ft, src, 10);
-	ft_putstr(" |-|||-| ");
-	ft_putstr("retour : ");
-	ft_putendl(result2);
 	return (memcmp(result1, result2, 10));
 }
 
@@ -57,12 +47,7 @@ static int	test_memcpy_3()
 	char	*result2;
 
 	result1 = memcpy(norm, src, 3);
-	ft_putstr("retour : ");
-	ft_putstr(result1);
 	result2 = ft_memcpy(ft, src, 3);
-	ft_putstr(" |-|||-| ");
-	ft_putstr("retour : ");
-	ft_putendl(result2);
 	return (memcmp(result1, result2, 7));
 }
 
@@ -75,21 +60,15 @@ static int	test_memcpy_4()
 	char	*result2;
 
 	result1 = memcpy(norm, src, 5);
-	ft_putstr("retour : ");
-	ft_putstr(result1);
 	result2 = ft_memcpy(ft, src, 5);
-	ft_putstr(" |-|||-| ");
-	ft_putstr("retour : ");
-	ft_putendl(result2);
 	return (memcmp(result1, result2, 6));
 }
 
 void		test_memcpy()
 {
-	ft_putendl("TEST MEMCPY :");
+	ft_putstr("TEST MEMCPY :");
 	if (!test_memcpy_1() && !test_memcpy_2() && !test_memcpy_3() && !test_memcpy_4())
 		ft_putendl("ok :)");
 	else
 		ft_putendl("not ok :(");
-	ft_putchar('\n');
 }

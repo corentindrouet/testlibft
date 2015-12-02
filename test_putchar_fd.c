@@ -1,35 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_strdup.c                                      :+:      :+:    :+:   */
+/*   test_putchar_fd.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cdrouet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/01 09:01:05 by cdrouet           #+#    #+#             */
-/*   Updated: 2015/12/02 13:09:33 by cdrouet          ###   ########.fr       */
+/*   Created: 2015/12/02 14:42:32 by cdrouet           #+#    #+#             */
+/*   Updated: 2015/12/02 14:48:33 by cdrouet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "testlibft.h"
+#include <fcntl.h>
 
-static int	test_strdup_1()
+static int	test_putchar_fd_1()
 {
-	char	*result1;
-	char	*result2;
-	int		ret;
+	int		fd;
+	int		res;
+	char	c;
 
-	result1 = strdup("bonjour");
-	result2 = ft_strdup("bonjour");
-	ret = memcmp(result1, result2, 8);
-	free(result1);
-	free(result2);
-	return (ret);
+	fd = 0;
+	res = 0;
+	fd = open("tempo.txt", O_CREAT | O_TRUNC | O_RDWR, S_IRUSR | S_IWUSR | S_IXUSR);
+	ft_putchar_fd('c', fd);
+	close(fd);
+	fd = open("tempo.txt", O_RDWR);
+	read(fd, &c, 1);
+	close(fd);
+	return (c - 'c');
 }
 
-void		test_strdup()
+void		test_putchar_fd()
 {
-	ft_putstr("TEST STRDUP : ");
-	if (!test_strdup_1())
+	ft_putstr("TEST PUTCHAR FD : ");
+	if (!test_putchar_fd_1())
 		ft_putendl("ok :)");
 	else
 		ft_putendl("not ok :(");

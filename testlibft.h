@@ -6,7 +6,7 @@
 /*   By: cdrouet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 13:42:15 by cdrouet           #+#    #+#             */
-/*   Updated: 2015/12/02 12:00:14 by cdrouet          ###   ########.fr       */
+/*   Updated: 2015/12/02 17:01:22 by cdrouet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <unistd.h>
 # include "libft.h"
 
+void	test_tolower();
+void	test_toupper();
 void	test_memset();
 void	test_bzero();
 void	test_memcpy();
@@ -42,5 +44,20 @@ void	test_isalpha();
 void	test_isdigit();
 void	test_isalnum();
 void	test_isascii();
+void	test_isprint();
+void	test_putnbr_fd();
+void	test_putendl_fd();
+void	test_putstr_fd();
+void	test_putchar_fd();
+void	test_putendl();
+void	test_itoa();
+void	test_strsplit();
+void	test_strtrim();
+void	test_strjoin();
+void	test_putnbr();
+void	test_putstr();
+void	test_putchar();
+void	test_memalloc();
+void	test_memdel();
 
 #endif

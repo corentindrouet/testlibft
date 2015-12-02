@@ -6,7 +6,7 @@
 /*   By: cdrouet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 08:54:43 by cdrouet           #+#    #+#             */
-/*   Updated: 2015/12/01 09:00:58 by cdrouet          ###   ########.fr       */
+/*   Updated: 2015/12/02 13:09:48 by cdrouet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@ static int	test_strlen_1()
 
 void		test_strlen()
 {
-	ft_putendl("TEST STRLEN :");
+	ft_putstr("TEST STRLEN : ");
 	if (!test_strlen_1())
 		ft_putendl("ok :)");
-	ft_putchar('\n');
 }

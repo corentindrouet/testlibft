@@ -6,7 +6,7 @@
 /*   By: cdrouet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 11:49:33 by cdrouet           #+#    #+#             */
-/*   Updated: 2015/12/02 11:53:17 by cdrouet          ###   ########.fr       */
+/*   Updated: 2015/12/02 13:00:02 by cdrouet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,9 @@ static int	test_isalnum_2()
 
 void		test_isalnum()
 {
-	ft_putendl("TEST ISALNUM :");
+	ft_putstr("TEST ISALNUM : ");
 	if (!test_isalnum_1() && !test_isalnum_2())
 		ft_putendl("ok :)");
 	else
 		ft_putendl("not ok :(");
-	ft_putchar('\n');
 }

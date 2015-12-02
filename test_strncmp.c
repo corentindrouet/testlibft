@@ -6,7 +6,7 @@
 /*   By: cdrouet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 10:57:01 by cdrouet           #+#    #+#             */
-/*   Updated: 2015/12/02 11:07:46 by cdrouet          ###   ########.fr       */
+/*   Updated: 2015/12/02 13:01:06 by cdrouet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,9 @@ static int	test_strncmp_3()
 
 void		test_strncmp()
 {
-	ft_putendl("TEST STRNCMP");
+	ft_putstr("TEST STRNCMP : ");
 	if (!test_strncmp_1() && !test_strncmp_2() && !test_strncmp_3())
 		ft_putendl("ok :)");
 	else
 		ft_putendl("not ok :(");
-	ft_putchar('\n');
 }

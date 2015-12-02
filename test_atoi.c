@@ -6,7 +6,7 @@
 /*   By: cdrouet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 11:09:11 by cdrouet           #+#    #+#             */
-/*   Updated: 2015/12/02 11:18:02 by cdrouet          ###   ########.fr       */
+/*   Updated: 2015/12/02 13:00:49 by cdrouet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,9 @@ static int	test_atoi_4()
 
 void		test_atoi()
 {
-	ft_putendl("TEST ATOI :");
+	ft_putstr("TEST ATOI : ");
 	if (!test_atoi_1() && !test_atoi_2() && !test_atoi_3() && !test_atoi_4())
 		ft_putendl("ok :)");
 	else
 		ft_putendl("not ok :(");
-	ft_putchar('\n');
 }
