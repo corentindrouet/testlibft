@@ -6,7 +6,7 @@
 /*   By: cdrouet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 13:18:20 by cdrouet           #+#    #+#             */
-/*   Updated: 2015/12/02 17:01:01 by cdrouet          ###   ########.fr       */
+/*   Updated: 2015/12/03 10:27:39 by cdrouet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,16 @@ int	main(void)
 	test_putchar();
 	test_memalloc();
 	test_memdel();
+	test_strnew();
+	test_strdel();
+	test_strclr();
+	test_striter();
+	test_striteri();
+	test_strmap();
+	test_strmapi();
+	test_strequ();
+	test_strnequ();
+	test_strsub();
 
 	return (0);
 }
